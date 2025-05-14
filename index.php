@@ -120,17 +120,17 @@ $featuredProducts = $stmt->fetchAll();
                         <div class="product-img">
                             <?php 
                             // Перевірка наявності зображення
-                            $imagePath = !empty($product['image']) ? $product['image'] : 'uploads/no-image.png';
+                            $imagePath = !empty($product['image']) ? $product['image'] : 'admin/uploads/no-image.png';
                             
                             // Перевірка, чи файл існує
                             $imageExists = file_exists($imagePath);
                             
                             // Якщо файл не існує, використовуємо заглушку
-                            $displayPath = $imageExists ? $imagePath : 'uploads/no-image.png';
+                            $displayPath = $imageExists ? $imagePath : 'admin/uploads/no-image.png';
                             ?>
                             <img src="<?php echo $displayPath; ?>" 
                                  alt="<?php echo escape($product['name']); ?>"
-                                 onerror="this.onerror=null; this.src='uploads/no-image.png';">
+                                 onerror="this.onerror=null; this.src='admin/uploads/no-image.png';">
                         </div>
                         <div class="product-info">
                             <h3><?php echo escape($product['name']); ?></h3>

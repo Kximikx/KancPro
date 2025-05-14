@@ -72,7 +72,7 @@ function ensureDirectoryPermissions($dir) {
 }
 
 // Завантаження зображення - виправлена версія з розширеними правами доступу
-function uploadImage($file, $targetDir = 'uploads/') {
+function uploadImage($file, $targetDir = 'admin/uploads/') {
     // Детальне логування для діагностики
     logError("Початок завантаження зображення. Файл: " . print_r($file, true));
     
@@ -168,15 +168,15 @@ function fixImagePath($path) {
     $path = str_replace('../', '', $path);
     
     // Переконуємося, що шлях починається з "uploads/"
-    if (!empty($path) && strpos($path, 'uploads/') !== 0) {
-        $path = 'uploads/' . basename($path);
+    if (!empty($path) && strpos($path, 'admin/uploads/') !== 0) {
+        $path = 'admin/uploads/' . basename($path);
     }
     
     return $path;
 }
 
 // Функція для перевірки наявності зображення та повернення правильного шляху
-function getImagePath($imagePath, $defaultImage = 'uploads/no-image.png') {
+function getImagePath($imagePath, $defaultImage = 'admin/uploads/no-image.png') {
     // Перевірка, чи шлях не порожній
     if (empty($imagePath)) {
         return $defaultImage;

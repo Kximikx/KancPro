@@ -301,7 +301,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         // Виправлення шляху до зображення
                                         $imagePath = fixImagePath($product['image']);
                                         $imageExists = file_exists($imagePath);
-                                        $displayPath = $imageExists ? '../' . $imagePath : '../uploads/no-image.png';
+                                        $displayPath = $imageExists ? '../' . $imagePath : 'admin/uploads/no-image.png';
                                         ?>
                                         <div>
                                             <img src="<?php echo $displayPath; ?>" alt="<?php echo escape($product['name']); ?>" class="product-image-preview">
