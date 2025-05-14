@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     // Завантаження зображення
     if (!empty($_FILES['image']['name'])) {
-        error_log("Спроба завантажити зображення: " . $_FILES['image']['name']);
+        error_log("Спроба завантажити зображення: " .$imageFile = $_FILES['image']['name']);
         
         // Переконуємося, що директорія uploads існує і має правильні права доступу
         ensureDirectoryPermissions('uploads/');
@@ -301,7 +301,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         // Виправлення шляху до зображення
                                         $imagePath = fixImagePath($product['image']);
                                         $imageExists = file_exists($imagePath);
-                                        $displayPath = $imageExists ? '../' . $imagePath : 'admin/uploads/no-image.png';
+                                        $displayPath = $imageExists ? 'uploads/' . basename($imagePath) : 'uploads/no-image.png';
                                         ?>
                                         <div>
                                             <img src="<?php echo $displayPath; ?>" alt="<?php echo escape($product['name']); ?>" class="product-image-preview">

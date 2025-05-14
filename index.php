@@ -27,6 +27,8 @@ $featuredProducts = $stmt->fetchAll();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Канцелярський Магазин</title>
+    <link rel="shortcut icon" href="img/Link.jpg" type="image/png">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -37,7 +39,7 @@ $featuredProducts = $stmt->fetchAll();
     <header>
         <div class="container">
             <div class="logo">
-                <h1>КанцПро</h1>
+                <img src="img/Logo.jpg" alt="Logo">
             </div>
             <nav>
                 <ul class="menu">
@@ -61,7 +63,7 @@ $featuredProducts = $stmt->fetchAll();
         <div class="hero-overlay">
             <div class="container">
                 <div class="hero-content">
-                    <h2>Ласкаво просимо до КанцПро</h2>
+                    <h1>Ласкаво просимо до КанцПро</h1>
                     <p>Найкращі канцелярські товари для офісу, школи та творчості</p>
                     <a href="#products" class="btn">Переглянути товари</a>
                 </div>
@@ -169,7 +171,7 @@ $featuredProducts = $stmt->fetchAll();
                     </ul>
                 </div>
                 <div class="about-image">
-                    <img src="uploads/about-image.jpg" alt="Наш магазин" onerror="this.onerror=null; this.src='uploads/no-image.png';">
+                    <img src="img/Robota.jpeg" alt="Наш магазин" onerror="this.onerror=null; this.src='uploads/no-image.png';">
                 </div>
             </div>
         </div>
